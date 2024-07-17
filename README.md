@@ -202,7 +202,7 @@ Here's a visual walkthrough of the system in action:
 
 ### Question Answering
 
-![Question Answering](https://path/to/your/question_answering.gif)
+![Question Answering](https://github.com/ZXEcoder/Step-AI-Project/blob/main/gif/1.gif)
 
 ### User Interface
 
