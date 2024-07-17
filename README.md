@@ -1,13 +1,11 @@
-```markdown
+
 # Web-Based Question Answering System
 
 ## Overview
 
 This project is a sophisticated web-based question answering system designed to scrape, chunk, and analyze data from the NVIDIA CUDA documentation. The system utilizes advanced techniques for data chunking, vector storage, hybrid retrieval
 
-Here's a comprehensive `README.md` file for your GitHub project:
 
-```markdown
 # Web-Based Question Answering System
 
 ## Overview
