@@ -1,73 +1,75 @@
+---
 
-# Web-Based Question Answering System
+# 🌐 Web-Based Question Answering System
 
-## Overview
+Welcome to the Web-Based Question Answering System! This project is designed to scrape, chunk, and analyze data from the NVIDIA CUDA documentation to provide accurate and relevant answers to user queries. It employs advanced techniques for data chunking, vector storage, hybrid retrieval, and re-ranking, all powered by a robust language model for generating responses.
 
-This project is a sophisticated web-based question answering system designed to scrape, chunk, and analyze data from the NVIDIA CUDA documentation. The system utilizes advanced techniques for data chunking, vector storage, hybrid retrieval
+---
 
+## 📋 Table of Contents
 
-# Web-Based Question Answering System
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [File Structure](#file-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-## Overview
+---
 
-This project is a sophisticated web-based question answering system designed to scrape, chunk, and analyze data from the NVIDIA CUDA documentation. The system utilizes advanced techniques for data chunking, vector storage, hybrid retrieval, and re-ranking to provide accurate and relevant answers to user queries.
+## 🚀 Features
 
-## Features
+- **Web Crawling**: 
+  - Scrape data from the [NVIDIA CUDA Documentation](https://docs.nvidia.com/cuda/).
+  - Retrieve data from sub-links up to 5 levels deep.
 
-1. **Web Crawling**
-   - Scrapes data from the provided website: [NVIDIA CUDA Documentation](https://docs.nvidia.com/cuda/).
-   - Retrieves data from sub-links up to 5 levels deep.
-   - Identifies and scrapes data from both parent and sub-links.
+- **Data Chunking and Vector Database Creation**:
+  - Chunk data based on semantic similarity and topic relevance.
+  - Convert data into embedding vectors.
+  - Store embedding vectors in a Milvus vector database using HNSW indexing.
+  - Store relevant metadata, such as web-links of the extracted chunks.
 
-2. **Data Chunking and Vector Database Creation**
-   - Chunks the scraped data based on semantic similarity and topic relevance.
-   - Converts the chunked data into embedding vectors.
-   - Stores embedding vectors in a Milvus vector database using HNSW indexing.
-   - Stores relevant metadata, such as the web-link of the extracted chunk.
+- **Retrieval and Re-ranking**:
+  - Implement query expansion techniques.
+  - Use hybrid retrieval methods (BM25 and BERT/bi-encoder methods like DPR and Spider).
+  - Re-rank retrieved data based on query relevance and similarity.
 
-3. **Retrieval and Re-ranking**
-   - Implements query expansion techniques to enhance retrieval.
-   - Utilizes hybrid retrieval methods combining BM25 and BERT/bi-encoder-based retrieval methods like DPR and Spider.
-   - Re-ranks retrieved data based on relevance and similarity to the query.
+- **Question Answering**:
+  - Pass retrieved and re-ranked data to an LLM for generating answers.
+  - Utilize the LLaMA model from Hugging Face for accurate responses.
 
-4. **Question Answering**
-   - Passes retrieved and re-ranked data to an LLM for generating answers.
-   - Utilizes LLaMA model from Hugging Face for generating accurate and relevant answers.
+- **User Interface (Optional)**:
+  - Provide a user interface using Streamlit or Gradio.
+  - Allow users to input queries and display retrieved answers.
 
-5. **User Interface (Optional)**
-   - Provides a user interface using Streamlit or Gradio for query input and answer display.
+---
 
-## Prerequisites
+## 🛠 Prerequisites
 
-1. **Python**: Ensure you have Python 3.8 or higher installed.
-2. **Libraries**:
-   - `transformers`
-   - `torch`
-   - `pymilvus`
-   - `requests`
-   - `beautifulsoup4`
-   - `langchain`
-   - `streamlit` (if using the UI)
+- **Python**: Python 3.8 or higher.
+- **Libraries**: Install the required Python libraries using `requirements.txt`.
+- **Milvus**: Install and set up Milvus. Follow the [Milvus installation guide](https://zilliz.com/blog/getting-started-with-a-milvus-connection).
+- **Hugging Face Token**: Obtain a token from [Hugging Face](https://huggingface.co) for accessing the LLaMA model.
 
-3. **Milvus**: Install and set up Milvus. Follow the [Milvus installation guide](https://zilliz.com/blog/getting-started-with-a-milvus-connection).
+---
 
-4. **Hugging Face Token**: Obtain a Hugging Face token for accessing the LLaMA model. You can get it from [Hugging Face](https://huggingface.co).
+## 📥 Installation
 
-## Installation
-
-1. **Clone the repository**:
+1. **Clone the Repository**:
    ```sh
    git clone https://github.com/yourusername/question-answering-system.git
    cd question-answering-system
    ```
 
-2. **Install Python dependencies**:
+2. **Install Python Dependencies**:
    ```sh
    pip install -r requirements.txt
    ```
 
-3. **Set up Milvus**:
-   Follow the [Milvus installation guide](https://zilliz.com/blog/getting-started-with-a-milvus-connection) to set up Milvus on your cloud or local machine.
+3. **Set Up Milvus**:
+   Follow the [Milvus installation guide](https://zilliz.com/blog/getting-started-with-a-milvus-connection).
 
 4. **Configure Environment Variables**:
    Create a `.env` file in the root directory and add your Hugging Face token:
@@ -75,51 +77,81 @@ This project is a sophisticated web-based question answering system designed to 
    HF_TOKEN=your_hugging_face_token
    ```
 
-## Usage
+---
 
-1. **Run the web crawler**:
-   ```sh
-   python web_crawler.py
-   ```
-   This will scrape data from the NVIDIA CUDA documentation and store it in `chunked_data.json`.
+## 🚀 Usage
 
-2. **Create Vector Database and Insert Data**:
-   ```sh
-   python create_vector_db.py
-   ```
+### Running the Web Crawler
 
-3. **Run the Question Answering System**:
-   ```sh
-   python question_answering.py
-   ```
+Run the web crawler to scrape data from the NVIDIA CUDA documentation and store it in `chunked_data.json`:
+```sh
+python web_crawler.py
+```
 
-4. **(Optional) Run the User Interface**:
-   ```sh
-   streamlit run app.py
-   ```
+### Creating Vector Database and Inserting Data
 
-## File Structure
+Run the script to chunk the data and create a vector database:
+```sh
+python create_vector_db.py
+```
 
-- `web_crawler.py`: Script for web crawling and data scraping.
-- `create_vector_db.py`: Script for chunking data and creating vector database.
-- `question_answering.py`: Main script for question answering.
-- `app.py`: Streamlit app for the user interface.
-- `requirements.txt`: List of required Python packages.
-- `.env`: Environment variables.
+### Running the Question Answering System
 
-## Contributing
+Run the main script for question answering:
+```sh
+python question_answering.py
+```
 
-Contributions are welcome! Please create a pull request with detailed descriptions of the changes.
+### Running the User Interface (Optional)
 
-## License
+Run the Streamlit app for the user interface:
+```sh
+streamlit run app.py
+```
+
+---
+
+## 📁 File Structure
+
+```
+question-answering-system/
+│
+├── web_crawler.py           # Script for web crawling and data scraping
+├── create_vector_db.py      # Script for chunking data and creating vector database
+├── question_answering.py    # Main script for question answering
+├── app.py                   # Streamlit app for the user interface
+├── requirements.txt         # List of required Python packages
+└── .env                     # Environment variables
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! To contribute, fork the repository, create a new branch, and submit a pull request. Please provide detailed descriptions of your changes.
+
+---
+
+## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Acknowledgements
+---
+
+## 💬 Acknowledgements
 
 - [Hugging Face](https://huggingface.co) for providing the LLaMA model.
 - [Milvus](https://milvus.io) for the vector database solution.
 - [Streamlit](https://streamlit.io) for the web application framework.
-```
 
-This `README.md` file includes an overview of the project, features, prerequisites, installation instructions, usage guidelines, file structure, contribution guidelines, license information, and acknowledgements. Adjust the GitHub repository link, Hugging Face token instructions, and any other specifics as needed.
+---
+
+## 📧 Contact
+
+If you have any questions or suggestions, feel free to open an issue or contact us directly.
+
+Thank you for using our Web-Based Question Answering System!
+
+---
+
+This version of the `README.md` file is designed to be visually appealing and easy to navigate, making it user-friendly for anyone visiting your GitHub repository. Adjust the GitHub repository link, Hugging Face token instructions, and any other specifics as needed.
