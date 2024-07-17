@@ -126,14 +126,15 @@ streamlit run app.py
 ## 📁 File Structure
 
 ```
-question-answering-system/
-│
-├── web_crawler.py           # Script for web crawling and data scraping
-├── create_vector_db.py      # Script for chunking data and creating vector database
-├── question_answering.py    # Main script for question answering
-├── app.py                   # Streamlit app for the user interface
-├── requirements.txt         # List of required Python packages
-└── .env                     # Environment variables
+Nvidia_docs_search/
+├── crawler.py
+├── vector_db.py
+├── retrieval.py
+├── qa.py
+├── app.py
+├── requirements.txt
+└── README.md
+
 ```
 
 ---
