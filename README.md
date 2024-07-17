@@ -61,7 +61,7 @@ Welcome to the Web-Based Question Answering System! This project is designed to 
 
 1. **Clone the Repository**:
    ```sh
-   git clone https://github.com/yourusername/question-answering-system.git
+   gh repo clone ZXEcoder/Step-AI-Project
    cd question-answering-system
    ```
 
@@ -208,9 +208,10 @@ Here's a visual walkthrough of the system in action:
 </div>
 
 
-### User Interface
+### Watch the Demo on YouTube
 
-![User Interface](https://path/to/your/user_interface.gif)
+**[Watch the Demo on YouTube](https://youtu.be/1mjN40u3ejg)**
+
 
 ---
 
