@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+scrapy
+sentence-transformers
+pymilvus
+transformers
+rank_bm25
+torch
+streamlit
