@@ -16,6 +16,8 @@ Welcome to the Web-Based Question Answering System! This project is designed to 
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
+- [Demo](#demo)
 
 ---
 
@@ -88,12 +90,16 @@ Run the web crawler to scrape data from the NVIDIA CUDA documentation and store 
 python web_crawler.py
 ```
 
+![Web Crawling](https://path/to/your/web_crawling.gif)
+
 ### Creating Vector Database and Inserting Data
 
 Run the script to chunk the data and create a vector database:
 ```sh
 python create_vector_db.py
 ```
+
+![Vector Database Creation](https://path/to/your/vector_db_creation.gif)
 
 ### Running the Question Answering System
 
@@ -102,12 +108,16 @@ Run the main script for question answering:
 python question_answering.py
 ```
 
+![Question Answering](https://path/to/your/question_answering.gif)
+
 ### Running the User Interface (Optional)
 
 Run the Streamlit app for the user interface:
 ```sh
 streamlit run app.py
 ```
+
+![User Interface](https://path/to/your/user_interface.gif)
 
 ---
 
@@ -128,7 +138,33 @@ question-answering-system/
 
 ## 🤝 Contributing
 
-We welcome contributions! To contribute, fork the repository, create a new branch, and submit a pull request. Please provide detailed descriptions of your changes.
+We welcome contributions! To contribute, follow these steps:
+
+1. **Fork the Repository**: Click on the 'Fork' button on the top right corner of this repository page.
+
+2. **Clone the Forked Repository**:
+   ```sh
+   git clone https://github.com/yourusername/question-answering-system.git
+   cd question-answering-system
+   ```
+
+3. **Create a New Branch**:
+   ```sh
+   git checkout -b your-feature-branch
+   ```
+
+4. **Make Changes and Commit**:
+   ```sh
+   git add .
+   git commit -m "Add your commit message"
+   ```
+
+5. **Push Changes to GitHub**:
+   ```sh
+   git push origin your-feature-branch
+   ```
+
+6. **Submit a Pull Request**: Go to your forked repository on GitHub and click the 'New pull request' button.
 
 ---
 
@@ -150,8 +186,30 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 If you have any questions or suggestions, feel free to open an issue or contact us directly.
 
-Thank you for using our Web-Based Question Answering System!
+---
+
+## 📽 Demo
+
+Here's a visual walkthrough of the system in action:
+
+### Web Crawling
+
+![Web Crawling](https://path/to/your/web_crawling.gif)
+
+### Vector Database Creation
+
+![Vector Database Creation](https://path/to/your/vector_db_creation.gif)
+
+### Question Answering
+
+![Question Answering](https://path/to/your/question_answering.gif)
+
+### User Interface
+
+![User Interface](https://path/to/your/user_interface.gif)
 
 ---
 
-This version of the `README.md` file is designed to be visually appealing and easy to navigate, making it user-friendly for anyone visiting your GitHub repository. Adjust the GitHub repository link, Hugging Face token instructions, and any other specifics as needed.
+Thank you for using our Web-Based Question Answering System! 
+
+---
