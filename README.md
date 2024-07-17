@@ -90,7 +90,8 @@ Run the web crawler to scrape data from the NVIDIA CUDA documentation and store 
 python web_crawler.py
 ```
 
-![Web Crawling]([https://path/to/your/web_crawling.gif](https://drive.google.com/drive/folders/1jAhYDMNFyKZ63DIPIht-AGvQuJ5kSTD8?usp=sharing))
+![Web Crawling]([https://path/to/your/web_crawling.gif]
+![Web Crawling]([(https://drive.google.com/drive/folders/1jAhYDMNFyKZ63DIPIht-AGvQuJ5kSTD8?usp=sharing)])
 
 ### Creating Vector Database and Inserting Data
 
