@@ -90,8 +90,6 @@ Run the web crawler to scrape data from the NVIDIA CUDA documentation and store 
 python web_crawler.py
 ```
 
-![Web Crawling]()
-
 ![Web Crawling](https://drive.google.com/drive/folders/1jAhYDMNFyKZ63DIPIht-AGvQuJ5kSTD8?usp=sharing)
 
 ### Creating Vector Database and Inserting Data
@@ -203,9 +201,10 @@ Here's a visual walkthrough of the system in action:
 ![Vector Database Creation](https://path/to/your/vector_db_creation.gif)
 
 ### Question Answering
-
-![Question Answering](https://github.com/ZXEcoder/Step-AI-Project/blob/main/gif/1.gif)
-![Question Answering](https://github.com/ZXEcoder/Step-AI-Project/blob/main/gif/ezgif.com-video-to-gif-converter.gif)
+<div style="display: flex; justify-content: space-around;">
+    <img src="https://github.com/ZXEcoder/Step-AI-Project/blob/main/gif/1.gif" alt="Question Answering" width="45%">
+    <img src="https://github.com/ZXEcoder/Step-AI-Project/blob/main/gif/ezgif.com-video-to-gif-converter.gif" alt="Question Answering" width="45%">
+</div>
 
 
 ### User Interface
