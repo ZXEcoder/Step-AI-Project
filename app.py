@@ -16,15 +16,21 @@ def main():
         vector_db = VectorDB()
         vector_db.create_collection()
         vector_db.add_data(scraped_data)
-        st.write("Data added to vector database.")
+        vector_db.create_hnsw_index()
 
     query = st.text_input("Enter your query")
     if st.button("Get Answer"):
         retriever = Retriever()
-        # Add code to retrieve relevant data from the database
-        context = "Provide relevant context here"
+        retriever.data = [item['text'] for item in scraped_data]  # Update with actual document texts
+        retriever.train_bm25(retriever.data)
+        
+        search_results = vector_db.search(query)
+        top_results = retriever.retrieve(query)
+        
+        context = "Provide relevant context here from top_results"
         qa = QuestionAnswering()
         answer = qa.answer_question(query, context)
+        
         st.write(f"Answer: {answer}")
 
 if __name__ == "__main__":
