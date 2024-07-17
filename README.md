@@ -194,7 +194,7 @@ Here's a visual walkthrough of the system in action:
 
 ### Web Crawling
 
-![Web Crawling](https://path/to/your/web_crawling.gif)
+![Web Crawling]((https://github.com/ZXEcoder/Step-AI-Project/blob/main/gif/3.png))
 
 ### Vector Database Creation
 
