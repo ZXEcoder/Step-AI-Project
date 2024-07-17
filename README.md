@@ -195,6 +195,7 @@ Here's a visual walkthrough of the system in action:
 ### Web Crawling
 
 ![Web Crawling](https://github.com/ZXEcoder/Step-AI-Project/blob/main/gif/3.png)
+[Webcrawler link](https://huggingface.co/spaces/SurajJha21/stepai).
 
 ### Vector Database Creation
 
@@ -202,7 +203,8 @@ Here's a visual walkthrough of the system in action:
 
 ### Question Answering
 
-![Question Answering](https://github.com/ZXEcoder/Step-AI-Project/blob/main/gif/1.gif)![Question Answering](https://github.com/ZXEcoder/Step-AI-Project/blob/main/gif/ezgif.com-video-to-gif-converter.gif)
+![Question Answering](https://github.com/ZXEcoder/Step-AI-Project/blob/main/gif/1.gif)
+![Question Answering](https://github.com/ZXEcoder/Step-AI-Project/blob/main/gif/ezgif.com-video-to-gif-converter.gif)
 
 
 ### User Interface
